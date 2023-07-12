@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+/*font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;*/
+/*global variables*/
+:root{
+    --dark-rosered:rgb(211, 37, 37);
+    --light-rosered:rgb(216, 25, 25);
+    --gray-msg:#464545;
+}
+*{
+    margin:0
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family:'Montserrat',sans-serif;
+    overflow-x: hidden;
+    font-size: 18px;
+    
+}
+
+.main-container{
+    width: 60%;
+    padding: 15px;
+    margin: 15px;
+    transform: translateX(30%);
+    margin-bottom: 5%;
+    /*border: 1px solid #ccc;*/
+}
+
+.animate{
+    animation: dragform;
+    animation-timing-function: linear;
+    animation-duration: 1.5s;
+}
+
+.main-container table{
+    border: 1px solid #ccc;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+.main-container table th{
+    color: var(--dark-rosered);
+    
+}
+.main-container table td{
+    padding: 5px;
+    border-top: 1px solid #ccc;
+    
+}
+.fa-trash-can{
+    color: var(--dark-rosered);
+    cursor: pointer;
+}
+
+.form-head{
+    background: var(--dark-rosered);
+    width: 95%;
+    color: #f4f4f4;
+    padding: 15px;
+    line-height: 2.5rem;
+    border: none;
+}
+.form-head h1{
+    font-weight: 600;
+}
+.form-head p{
+    font-weight: 600;
+}
+
+
+.field{
+    border: 1px solid #ccc;
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    
+}
+
+.field a{
+    font-size: 14px;
+    color: #464545;
+    text-decoration: none;
+}
+.field label{
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+}
+.field input{
+    outline: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 70%;
+    padding: 15px 20px;
+    background-color: #f0eeee;
+    border: none;
+    border-bottom:2px solid var(--dark-rosered);
+    font-family:'Montserrat',sans-serif;
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+}
+.field> button{
+    font-family:'Montserrat',sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #fff;
+    color: var(--dark-rosered);
+    border: 1px solid var(--dark-rosered);
+    padding: 10px 20px;
+    margin: 15px;
+    margin-left: 0;
+    cursor: pointer;
+    transition: ease-in 0.3s;
+}
+.field:nth-child(1) p{
+    color: var(--gray-msg);
+    font-size: 14px;
+}
+.field:nth-last-child(1){
+    border: none;
+}
+.field:nth-last-child(1) button{
+    border: none;
+    font-family:'Montserrat',sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #f4f4f4;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: var(--dark-rosered);
+    cursor: pointer;
+}
+
+.field:nth-last-child(1) button:hover{
+    
+    background-color: var(--light-rosered);
+    
+}
+
+/*email error css*/
+.container-image{
+    width: 250px;
+    height: 250px;
+    margin-left: 25%;
+}
+.container-image>img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+
+.info{
+    font-size: 14px;
+    color: var(--gray-msg);
+
+}
+
+.access{
+    background: #fff;
+    border: none;
+    color: #333;
+}
+.access p{
+    font-size: 16px;
+}
+.access h2{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.access-page{
+    border: none;
+}
+
+.access-page input{
+    border: none;
+    width: 92%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.border-line{
+    border: 1px solid #ccc;
+    width: 40%;
+    transform: translateX(65%);
+    animation: dragform;
+    animation-timing-function: linear;
+    animation-duration: 1.5s;
+    /*animation-iteration-count: infinite;*/
+}
+
+
+input[type="password"]{
+    font-size: 30px;
+    padding: 5px 20px;
+}
+.navigation>nav ul form li{
+    display: inline-block;
+    font-size: 16px;
+    color: #707070;
+    cursor: pointer;
+}
+.navigation nav ul form li b{
+    font-weight: 600;
+    font-size: 22px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.navigation nav ul form li button{
+    font-size: 16px;
+    color: #707070;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    font-family:'Montserrat',sans-serif;
+}
+
+.navigation>nav ul li{
+    display: inline-block;
+    font-size: 16px;
+    color: #707070;
+    cursor: pointer;
+}
+
+/*STYLE MEMBER CARD*/
+.team-card{
+    /*border: 1px solid #ccc;*/
+    margin-top: 1%;
+    width: 18%;
+    position: absolute;
+    padding: 10px;
+    margin-left: 4px;
+    
+}
+.member{
+    /*border: 1px solid #ccc;*/
+    box-shadow: 0px 2px 4px 2px #ccc;
+    width: 94%;
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: grid;
+    grid-template-columns: minmax(0,40%) 1fr;
+    margin-top: 30px;
+}
+
+.pull1{
+    animation: dragform;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+}
+.pull2{
+    animation: dragform;
+    animation-timing-function: linear;
+    animation-duration: 1.5s;
+}
+.pull3{
+    animation: dragform;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+}
+.pull4{
+    animation: dragform;
+    animation-timing-function: linear;
+    animation-duration: 2.5s;
+}
+
+.member p{
+    font-size: 10px;
+    color: var(--gray-msg);
+    
+}
+.card-pic{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.card-pic img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    image-rendering: auto;
+    filter: grayscale(100%);
+    
+}
+.card-info{
+    margin-top: 14px;
+    font-weight: 500;
+}
+
+.head-card>img{
+    border-radius: 0;
+    filter: grayscale(0%);
+}
+
+
+
+/*.fa-person-circle-plus, .fa-list-ol{
+    font-size: 18px;
+}*/
+
+/*messages*/
+.err{
+    color: var(--dark-rosered);
+}
+.success{
+    color: rgb(24, 155, 78);
+}
+.main-container-errors{
+    display: none;
+    width: 60%;
+    padding: 15px;
+    margin: 15px;
+    transform: translateX(30%);
+    margin-bottom: 5%;
+}
+.inputMsg{
+    font-size: 12px;
+    font-weight: 600;
+}
+/*all key frames for animation - login and signup pages*/
+@keyframes dragform{
+    0%{
+        margin-left: -1000px;
+        opacity: 0;
+        
+    }
+    25%{
+        margin-left: -800px;
+        opacity: 0.5;
+    }
+    50%{
+        margin-left: -150px;
+        opacity: 0.7;
+    }
+    75%{
+        margin-left: -60px;
+        opacity: 0.8;
+    }
+    100%{
+        margin-left: 15px;
+        opacity: 1;
+    }
+
+}
+
+@media(max-width:800px){
+    body{
+        font-size: 16px;
+    }
+    .main-container{
+        width: 80%;
+        margin: 10px;
+        transform: translateX(1%);
+        font-size: 16px;
+        
+
+        /*border: 1px solid #ccc;*/
+    }
+    .form-head{
+        background: var(--dark-rosered);
+        width: 95%;
+        color: #f4f4f4;
+        padding: 15px;
+        line-height: 2.5rem;
+        border: none;
+    }
+    .form-head h1{font-size: 25px;}
+    
+    
+    .main-container table{
+        border: 1px solid #ccc;
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+        padding: 5px;
+        /*transform: translateX(-10%);*/
+        table-layout: fixed;
+    }
+    
+    .main-container table th{
+        color: var(--dark-rosered);
+         font-size: 12px;
+         word-wrap: break-word;
+    }
+    .main-container table td{
+        padding: 5px;
+        border-top: 1px solid #ccc;
+        font-size: 12px;
+        word-wrap: break-word;
+        
+    }
+
+    .border-line{
+        border: none;
+    }
+
+    .team-card{
+        margin-top: 5000px;
+        width: 90%;
+        margin-bottom: 2%;
+    }
+    
+    
+}
