@@ -35,14 +35,14 @@
             //try sending email
             try{
                 $mail->isSMTP();
-                $mail->Host = "smtp.gmail.com";
+                $mail->Host = "";//smtp.gmail.com
                 $mail->SMTPAuth = true;
-                $mail->Username = 'theophiluslowiti@gmail.com'; // SMTP username
-                $mail->Password = 'pdeabxhddsbejxgc'; // gmail App password
+                $mail->Username = ''; // SMTP username
+                $mail->Password = ''; // gmail App password
                 $mail->SMTPSecure = "ssl"; 
-                $mail->Port = 465; // Set the SMTP port
+                $mail->Port = ; // Set the SMTP port
                 // Sender and recipient
-                $mail->setFrom('theophiluslowiti@gmail.com', 'Florida Cloth Store'); // Set the sender's email address and name
+                $mail->setFrom('', 'Florida Cloth Store'); // Set the sender's email address and name
                 $mail->addAddress($emp_email, $emp_name); // Set the recipient's email address and name
 
                 // Email content
